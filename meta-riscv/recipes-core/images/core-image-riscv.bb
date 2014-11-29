@@ -4,7 +4,7 @@ IMAGE_FEATURES += "package-management"
 
 IMAGE_INSTALL = "packagegroup-core-boot ${ROOTFS_PKGMANAGE_BOOTSTRAP} ${CORE_IMAGE_EXTRA_INSTALL}"
 
-IMAGE_INSTALL += "dropbear apt"
+IMAGE_INSTALL += "dropbear apt memcached"
 
 IMAGE_LINGUAS = " "
 
