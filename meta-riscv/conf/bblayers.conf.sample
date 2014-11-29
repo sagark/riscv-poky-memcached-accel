@@ -10,6 +10,7 @@ BBLAYERS ?= " \
   ${TOPDIR}/../meta-yocto \
   ${TOPDIR}/../meta-yocto-bsp \
   ${TOPDIR}/../meta-networking \
+  ${TOPDIR}/../meta-oe \
   ${TOPDIR}/../meta-riscv \
   "
 BBLAYERS_NON_REMOVABLE ?= " \
