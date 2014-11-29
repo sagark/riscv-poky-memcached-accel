@@ -24,7 +24,7 @@ SRC_URI = "http://www.memcached.org/files/${BP}.tar.gz \
            file://memcached-add-hugetlbfs-check.patch"
 
 # set the same COMPATIBLE_HOST as libhugetlbfs
-COMPATIBLE_HOST = '(i.86|x86_64|powerpc|powerpc64|arm).*-linux'
+COMPATIBLE_HOST = '(i.86|x86_64|powerpc|powerpc64|arm|riscv-poky).*-linux'
 
 SRC_URI[md5sum] = "46402dfbd7faadf6182283dbbd18b1a6"
 SRC_URI[sha256sum] = "d9173ef6d99ba798c982ea4566cb4f0e64eb23859fdbf9926a89999d8cdc0458"
