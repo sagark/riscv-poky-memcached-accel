@@ -19,7 +19,7 @@ RDEPENDS_${PN} += "perl perl-module-posix perl-module-autoloader \
     perl-module-tie-hash bash \
     "
 
-SRC_URI = "http://www.memcached.org/files/${BP}.tar.gz \
+SRC_URI = "git://github.com/sagark/memcached-accel.git;branch=master;rev=facb719f40ecfcb98271a79561d4b94757b7a843  \
            file://configure.patch \
            file://memcached-add-hugetlbfs-check.patch"
 
@@ -28,6 +28,8 @@ COMPATIBLE_HOST = '(i.86|x86_64|powerpc|powerpc64|arm|riscv-poky).*-linux'
 
 SRC_URI[md5sum] = "46402dfbd7faadf6182283dbbd18b1a6"
 SRC_URI[sha256sum] = "d9173ef6d99ba798c982ea4566cb4f0e64eb23859fdbf9926a89999d8cdc0458"
+
+SRCREV_default_pn-memcached-accel ?= "facb719f40ecfcb98271a79561d4b94757b7a843"
 
 python __anonymous () {
     endianness = d.getVar('SITEINFO_ENDIANNESS', True)
