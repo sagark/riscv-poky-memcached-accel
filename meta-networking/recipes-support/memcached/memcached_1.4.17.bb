@@ -23,6 +23,8 @@ SRC_URI = "git://github.com/sagark/memcached-accel.git;branch=master;rev=facb719
            file://configure.patch \
            file://memcached-add-hugetlbfs-check.patch"
 
+S = "${WORKDIR}/git"
+
 # set the same COMPATIBLE_HOST as libhugetlbfs
 COMPATIBLE_HOST = '(i.86|x86_64|powerpc|powerpc64|arm|riscv-poky).*-linux'
 
@@ -46,6 +48,10 @@ inherit update-rc.d
 
 INITSCRIPT_NAME = "memcached"
 INITSCRIPT_PARAMS = "defaults"
+
+do_configure_prepend() {
+    ( cd "${S}" && ./autogen.sh )
+}
 
 do_install_append() {
     install -D -m 755 ${S}/scripts/memcached-init ${D}${sysconfdir}/init.d/memcached
