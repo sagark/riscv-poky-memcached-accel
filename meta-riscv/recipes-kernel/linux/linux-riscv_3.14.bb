@@ -45,7 +45,7 @@ SRC_URI[kernel.sha256sum] = "209d4607320f83485a057f6fc366489ada2da7ea7ab409a4bc1
 # uncomment and replace these SRCREVs with the real commit ids once you've had
 # the appropriate changes committed to the upstream linux-yocto repo
 #SRCREV_machine_pn-linux-yocto_riscv ?= "840bb8c059418c4753415df56c9aff1c0d5354c8"
-SRCREV_pn-linux-riscv ?= "ee9767312d44c1307298c2e18c98b1e297de9e70"
+SRCREV_pn-linux-riscv ?= "2ac1e6045716b7a9b9670d3cdf62bf9d8760761a"
 LINUX_VERSION = "3.14"
 
 do_patch[depends] = "kern-tools-native:do_populate_sysroot"
